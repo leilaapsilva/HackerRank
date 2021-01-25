@@ -105,3 +105,92 @@ if __name__ == '__main__':
     print(d)
     print(e)
 ~~~
+
+[sWAP cASE](https://www.hackerrank.com/challenges/swap-case/problem?isFullScreen=true)
+
+~~~python
+def swap_case(s):
+    
+    aux = ""
+    for i in range(len(s)):
+        if(s[i].isupper()):
+            aux += s[i].lower()
+        elif(s[i].islower()):
+            aux += s[i].upper()
+        else:
+            aux += s[i]
+    
+    return aux
+
+if __name__ == '__main__':
+    s = raw_input()
+    result = swap_case(s)
+    print result
+~~~
+
+[String Split and Join](https://www.hackerrank.com/challenges/python-string-split-and-join/problem?isFullScreen=true&h_r=next-challenge&h_v=zen)
+
+~~~Python
+def split_and_join(line):
+    a = "-".join(line.split(" ")) 
+    return a
+    
+if __name__ == '__main__':
+    line = raw_input()
+    result = split_and_join(line)
+    print result
+~~~
+
+[Mod Divmod](https://www.hackerrank.com/challenges/python-mod-divmod/problem?isFullScreen=true)
+
+~~~Python
+a = int(input())
+b = int(input())
+
+print(a // b)
+print(a % b)
+print(divmod(a, b))
+~~~
+
+[Power - Mod Power](https://www.hackerrank.com/challenges/python-power-mod-power/problem?isFullScreen=true&h_r=next-challenge&h_v=zen)
+
+~~~Python
+a = int(input())
+b = int(input())
+m = int(input())
+
+print(pow(a, b))
+print(pow(a, b, m))
+~~~
+
+[Integers Come In All Sizes](https://www.hackerrank.com/challenges/python-integers-come-in-all-sizes/problem?isFullScreen=true&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen)
+
+~~~Python
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+print(a**b + c**d)
+~~~
+
+[Capitalize!](https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true)
+
+### Não funcionou para todos os casos por enquanto :c
+
+~~~Python
+def solve(s):
+    lista = s.split()
+    
+    aux = []
+    for item in lista:
+        aux.append(item[0].upper())
+        for i in range(1, len(item)):
+            
+            aux.append(item[i])
+        
+        aux.append(" ")    
+    
+    s = ''.join(aux)
+    return s
+~~~
