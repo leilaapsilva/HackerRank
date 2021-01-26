@@ -194,3 +194,20 @@ def solve(s):
     s = ''.join(aux)
     return s
 ~~~
+
+[Tuples](https://www.hackerrank.com/challenges/python-tuples/problem?isFullScreen=true)
+
+~~~Python
+if __name__ == '__main__':
+    n = int(raw_input())
+    integer_list = map(int, raw_input().split())
+    
+    t = ()
+    
+    for i in range(n):
+        t += (integer_list[i],)
+        
+    print(hash(t))
+~~~
+
+
