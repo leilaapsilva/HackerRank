@@ -210,4 +210,68 @@ if __name__ == '__main__':
     print(hash(t))
 ~~~
 
+[Finding the percentage](https://www.hackerrank.com/challenges/finding-the-percentage/problem?isFullScreen=true)
+
+~~~Python
+if __name__ == '__main__':
+    n = int(raw_input())
+    student_marks = {}
+    for _ in range(n):
+        line = raw_input().split()
+        name, scores = line[0], line[1:]
+        scores = map(float, scores)
+        student_marks[name] = scores
+    query_name = raw_input()
+    
+    scores = student_marks[query_name]
+    average_score = (scores[0] + scores[1] + scores[2])/3
+    
+    print(format(average_score, '.2f'))
+~~~
+
+[Text Wrap](https://www.hackerrank.com/challenges/text-wrap/problem?isFullScreen=true)
+
+~~~Python
+import textwrap
+
+def wrap(string, max_width):
+    
+    wrapper = textwrap.TextWrapper(width=max_width)
+    wstring = wrapper.wrap(text=string)
+    
+    aux = ""
+    for i in wstring:
+        aux += i+'\n'
+            
+    return aux
+
+if __name__ == '__main__':
+    string, max_width = raw_input(), int(raw_input())
+    result = wrap(string, max_width)
+    print result
+~~~
+
+[Capitalize!](https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true)
+
+~~~Python
+def solve(s):
+    
+    string_list = s.split(" ")
+    aux = ""
+    for i in range(len(string_list)):
+        aux += string_list[i].capitalize() + " "
+
+    return aux 
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = raw_input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
+~~~
 
