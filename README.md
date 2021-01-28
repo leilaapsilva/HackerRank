@@ -1,5 +1,5 @@
 # HackerRank
-Resolução de problemas do site
+### Resolução de problemas do site, por [leilaapsilva](https://www.hackerrank.com/leilaapsilva)
 
 [Loops](https://www.hackerrank.com/challenges/python-loops/problem?isFullScreen=true)
 
@@ -274,4 +274,41 @@ if __name__ == '__main__':
 
     fptr.close()
 ~~~
+
+[Calendar Module](https://www.hackerrank.com/challenges/calendar-module/problem?isFullScreen=true)
+
+~~~Python
+import calendar 
+from datetime import datetime
+
+date_input = raw_input()
+date = datetime.strptime(date_input, '%m %d %Y').date() 
+day_of_week = calendar.day_name[date.weekday()] 
+
+print(day_of_week.upper())
+
+c = calendar.TextCalendar(calendar.SUNDAY)
+~~~
+
+[Introduction to Sets](https://www.hackerrank.com/challenges/py-introduction-to-sets/problem?isFullScreen=true)
+
+~~~Python
+from __future__ import division
+
+def average(array):
+    
+    s = set(array)
+    sum_dist = sum(s)
+    total_dist = len(s)
+    average = sum_dist/total_dist
+
+    return average 
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+    result = average(arr)
+    print result
+~~~
+
 
