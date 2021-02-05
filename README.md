@@ -311,4 +311,17 @@ if __name__ == '__main__':
     print result
 ~~~
 
+[Set.add()](https://www.hackerrank.com/challenges/py-set-add/problem?isFullScreen=true)
+
+~~~Python
+n = int(input())
+v = []
+s = set('')
+
+for i in range(n):
+    v.append(raw_input())
+    s.add(v[i])
+    
+print(len(s))    
+~~~
 
