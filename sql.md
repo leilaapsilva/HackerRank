@@ -45,5 +45,14 @@ from city ci inner join country co on ci.countrycode = co.code
 group by 1;
 ~~~
 
+https://www.hackerrank.com/challenges/more-than-75-marks/problem?isFullScreen=true
+
+~~~sql
+SELECT name
+FROM students
+WHERE marks > 75
+ORDER BY right(name, 3), id ASC;
+~~~
+
 
 
